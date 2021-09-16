@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.d("ttt","Hello")
         FirebaseAnalytics.getInstance(this).logEvent("main_screen_opened", null)
         FirebaseInAppMessaging.getInstance().triggerEvent("main_screen_opended")
         FirebaseInAppMessaging.getInstance().addClickListener { inAppMessage, action ->
